@@ -6,3 +6,48 @@ Logback是由log4j创始人设计的又一个开源日志组件。logback当前�
 logback的官方网站： http://logback.qos.ch
 
 SLF4J的官方网站：http://www.slf4j.org
+
+## 二、logback初探之helloword
+
+### 1,pom文件中加入所需包
+```
+<dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-core</artifactId>
+	<version>1.2.3</version>
+</dependency>
+
+<dependency>
+	<groupId>ch.qos.logback</groupId>
+	<artifactId>logback-classic</artifactId>
+	<version>1.2.3</version>
+</dependency>
+
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-api</artifactId>
+	<version>1.7.25</version>
+</dependency>
+```
+### 2,新建DemoHelloword类如下
+```
+/**
+ * logback 之 helloword
+ *
+ * @author zhangqh
+ * @date 2018年7月19日
+ */
+public class DemoHelloword {
+
+	public static void main(String[] args) {
+
+		Logger logger = LoggerFactory.getLogger(DemoHelloword.class);
+		logger.debug("Hello world.");
+
+	}
+}
+```
+### 3，执行结果如下
+```
+13:28:57.010 [main] DEBUG com.zhiliao.demo.DemoHelloword - Hello world.
+```
