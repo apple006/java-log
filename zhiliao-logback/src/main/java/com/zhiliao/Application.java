@@ -18,17 +18,17 @@ public class Application
 //    	Logger logger = LoggerFactory.getLogger("com.zhiliao.Application");
     	Logger logger = LoggerFactory.getLogger(Application.class);
     	logger.debug("aa{},{}", "Hello world.","fff");
-        logger.debug("Hello world.");
-        logger.info("Hello world.");
-    	try {
-			Thread.sleep(120000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        logger.error("Hello world.");
-        logger.trace("Hello world.");
-        logger.warn("Hello world.");
+//        logger.debug("Hello world.");
+//        logger.info("Hello world.");
+//    	try {
+//			Thread.sleep(120000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//        logger.error("Hello world.");
+//        logger.trace("Hello world.");
+//        logger.warn("Hello world.");
         
         // print internal state
 //        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();

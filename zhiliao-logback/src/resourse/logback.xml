@@ -27,19 +27,20 @@
 	<timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmm" />
 
 	<appender name="FILE2" class="ch.qos.logback.core.FileAppender">
-		<!-- use the previously created timestamp to create a uniquely named log 
-			file -->
+		use the previously created timestamp to create a uniquely named log 
+<!-- 			file -->
 		<file>log-${bySecond}.txt</file>
 		<encoder>
 			<pattern>%logger{35} - %msg%n</pattern>
 		</encoder>
 	</appender>
 
-	<logger name="com.zhiliao.Application" additivity="true">
+	<logger name="com.zhiliao.Application" additivity="false">
 	    <appender-ref ref="FILE" />
     </logger>
+    
     <root level="debug">
         <appender-ref ref="STDOUT" />
-        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE" />
     </root>
 </configuration>
