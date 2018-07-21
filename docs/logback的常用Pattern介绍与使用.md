@@ -2,14 +2,23 @@
 ## 一、logback的常用Pattern介绍
 
 >日志打印时间  %d|%date{时间格式化}  如：%d{YYYY-MM-dd HH:mm:ss}
+
  相对时间   %r|%relative 
+ 
  日志级别  %p|%le|%level
+ 
  线程名称 %t|%thread
+ 
  log配置名称  %c|%lo|%logger
+ 
  具体打印消息  %m|%msg|%message
+ 
  日志打印的类  %C|%class 注意%C是大写C
+ 
  执行方法 %M|%method
+ 
  代码执行具体行 %L|%line
+ 
  具体文件 %F|%file
 
 除了这些常用的Pattern之外，其他配置可以[点击查看](https://github.com/qos-ch/logback/blob/master/logback-classic/src/main/java/ch/qos/logback/classic/PatternLayout.java)
