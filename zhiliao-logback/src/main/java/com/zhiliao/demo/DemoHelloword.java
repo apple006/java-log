@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 public class DemoHelloword {
 
 	public static void main(String[] args) {
-
 		Logger logger = LoggerFactory.getLogger(DemoHelloword.class);
 		logger.debug("Hello world.");
 
