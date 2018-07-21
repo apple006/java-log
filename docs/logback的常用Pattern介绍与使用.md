@@ -62,4 +62,6 @@ public static void main(String[] args) {
 
 ```
 
+具体详情可以[点击查看](https://github.com/zhiliao666/java-log/blob/master/zhiliao-logback/src/main/java/com/zhiliao/demo/DemoLogPattern.java)
+
 
