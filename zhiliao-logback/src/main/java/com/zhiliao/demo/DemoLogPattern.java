@@ -14,12 +14,12 @@ import ch.qos.logback.core.ConsoleAppender;
  * @author zhangqh
  * @date 2018年7月21日
  */
-public class DemoLogFormat {
+public class DemoLogPattern {
 	
 	public static void main(String[] args) {
 		
 		// 注意这边classic包中的Logger
-		Logger rootLogger = (Logger) LoggerFactory.getLogger(DemoLogFormat.class);
+		Logger rootLogger = (Logger) LoggerFactory.getLogger(DemoLogPattern.class);
 
 		LoggerContext loggerContext = rootLogger.getLoggerContext();
 		// 这边必须重置自动配置
