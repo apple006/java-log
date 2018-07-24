@@ -1,46 +1,14 @@
 
 ****
-## 目录
-* [横线](#横线)
-* [标题](#标题)
-* [文本](#文本)
-    * 普通文本
-    * 单行文本
-    * 多行文本
-    * 文字高亮
-    * 换行
-    * 斜体
-    * 粗体
-    * 删除线
-* [图片](#图片)
-    * 来源于网络的图片
-    * GitHub仓库中的图片
-* [链接](#链接) 
-    * 文字超链接
-        *  链接外部URL
-        *  链接本仓库里的URL
-    *  锚点
-    * [图片链接](#图片链接)
-* [列表](#列表)
-    * 无序列表
-    * 有序列表
-    * 复选框列表
-* [块引用](#块引用)
-* [代码高亮](#代码高亮)
-* [表格](#表格) 
-* [表情](#表情)
-* [diff语法](#diff语法)
-
-### 横线
 
 # 目录
 
 * [logback的介绍](#logback的介绍)
-* [二、logback之配置使用](#二、logback之配置使用)
-    * [1，logback之初探helloword](#1，logback之初探helloword)
-    * [2、logback的常用Pattern介绍](#2、logback的常用Pattern介绍)
-    * [3、logback之基于java手动编写Pattern演示使用](#3、logback之基于java手动编写Pattern演示使用)
-    * [4，logback基于配置文件的使用](#4，logback基于配置文件的使用)
+* [logback之配置使用](#logback之配置使用)
+    * [logback之初探helloword](#logback之初探helloword)
+    * [logback的常用Pattern介绍](#logback的常用Pattern介绍)
+    * [logback之基于java手动编写Pattern演示使用](#logback之基于java手动编写Pattern演示使用)
+    * [logback基于配置文件的使用](#logback基于配置文件的使用)
 		* [4.1 基于配置文件打印日志](#4.1 基于配置文件打印日志)
 		* [4.2 logback日志打印到具体file文件](#4.2 logback日志打印到具体file文件)
 		* [4.3 logback根据项目运行时间生成对应的日志文件](#4.3 logback根据项目运行时间生成对应的日志文件)
@@ -55,9 +23,9 @@ Logback是由log4j创始人设计的又一个开源日志组件。logback当前�
 logback的官方网站：http://logback.qos.ch
 SLF4J的官方网站：http://www.slf4j.org
 
-## 二、logback之配置使用
+## logback之配置使用
 
-### 1，logback之初探helloword
+### logback之初探helloword
 
 > 项目所需包引入：
 
