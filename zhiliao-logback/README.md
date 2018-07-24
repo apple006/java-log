@@ -1,4 +1,6 @@
 
+[TOC]
+
 ## 一、logback的介绍
 
 Logback是由log4j创始人设计的又一个开源日志组件。logback当前分成三个模块：logback-core，logback- classic和logback-access。logback-core是其它两个模块的基础模块。logback-classic是log4j的一个改良版本。此外logback-classic完整实现SLF4J API使你可以很方便地更换成其它日志系统如log4j或JDK14 Logging。logback-access访问模块与Servlet容器集成提供通过Http来访问日志的功能。 Logback是要与SLF4J结合起来用两个组件的官方网站如下：
@@ -6,9 +8,12 @@ Logback是由log4j创始人设计的又一个开源日志组件。logback当前�
 logback的官方网站：http://logback.qos.ch
 SLF4J的官方网站：http://www.slf4j.org
 
-## 二、logback之初探helloword
+## 二、logback之配置使用
 
-### 1,pom文件中加入所需包
+### 1，logback之初探helloword
+
+> 项目所需包引入：
+
 ```
 <dependency>
 	<groupId>ch.qos.logback</groupId>
@@ -28,7 +33,8 @@ SLF4J的官方网站：http://www.slf4j.org
 	<version>1.7.25</version>
 </dependency>
 ```
-### 2,新建DemoHelloword类如下
+
+> 新建DemoHelloword类如下
 ```
 /**
  * logback 之 helloword
@@ -46,13 +52,13 @@ public class DemoHelloword {
 	}
 }
 ```
-### 3，执行结果如下
+> 运行结果如下
 ```
 13:28:57.010 [main] DEBUG com.zhiliao.demo.DemoHelloword - Hello world.
 ```
 
 
-## 一、logback的常用Pattern介绍
+### 2、logback的常用Pattern介绍
 
 >日志打印时间  %d|%date{时间格式化}  如：%d{YYYY-MM-dd HH:mm:ss}  
  相对时间   %r|%relative  
@@ -67,7 +73,7 @@ public class DemoHelloword {
 
 除了这些常用的Pattern之外，其他配置可以[点击查看](https://github.com/qos-ch/logback/blob/master/logback-classic/src/main/java/ch/qos/logback/classic/PatternLayout.java)
 
-## 二、logback之基于java手动编写Pattern演示使用
+### 3、logback之基于java手动编写Pattern演示使用
 
 ```
 public static void main(String[] args) {
@@ -118,11 +124,13 @@ public static void main(String[] args) {
 具体详情可以[点击查看](https://github.com/zhiliao666/java-log/blob/master/zhiliao-logback/src/main/java/com/zhiliao/demo/DemoLogPattern.java)
 
 
-# logback基于配置文件的使用
+### 4，logback基于配置文件的使用
 
-### 基于配置文件打印日志
+#### 4.1 基于配置文件打印日志
 
-配置如下：
+
+>配置如下：
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -147,9 +155,10 @@ public static void main(String[] args) {
 
 运行演示代码具体可以[点击查看](https://github.com/zhiliao666/java-log/blob/master/zhiliao-logback/src/main/java/com/zhiliao/demo/DemoLogReadConfig01.java)
 
-### logback日志打印到文件
+#### 4.2 logback日志打印到具体file文件
 
-配置如下：
+>配置如下：
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -182,7 +191,7 @@ public static void main(String[] args) {
 </configuration>
 
 ```
-### 根据项目运行时间生成对应的日志文件
+#### 4.3 logback根据项目运行时间生成对应的日志文件
 
 配置如下：
 ```
@@ -217,7 +226,7 @@ public static void main(String[] args) {
 </configuration>
 
 ```
-### logback基于时间回滚日志配置
+#### 4.4 logback基于时间回滚日志配置
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -274,7 +283,8 @@ public static void main(String[] args) {
 
 ```
 
-### logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy
+#### 4.5 logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
