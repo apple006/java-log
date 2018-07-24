@@ -9,11 +9,11 @@
     * [logback的常用Pattern介绍](#logback的常用Pattern介绍)
     * [logback之基于java手动编写Pattern演示使用](#logback之基于java手动编写Pattern演示使用)
     * [logback基于配置文件的使用](#logback基于配置文件的使用)
-		* [4.1 基于配置文件打印日志](#4.1 基于配置文件打印日志)
-		* [4.2 logback日志打印到具体file文件](#4.2 logback日志打印到具体file文件)
-		* [4.3 logback根据项目运行时间生成对应的日志文件](#4.3 logback根据项目运行时间生成对应的日志文件)
-		* [4.4 logback基于时间回滚日志配置](#4.4 logback基于时间回滚日志配置)
-		* [4.5 logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy](#4.5 logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy)
+		* [基于配置文件打印日志](#基于配置文件打印日志)
+		* [logback日志打印到具体file文件](#logback日志打印到具体file文件)
+		* [logback根据项目运行时间生成对应的日志文件](#logback根据项目运行时间生成对应的日志文件)
+		* [logback基于时间回滚日志配置](#logback基于时间回滚日志配置)
+		* [logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy](#logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy)
 
 
 ## logback的介绍
@@ -73,7 +73,7 @@ public class DemoHelloword {
 ```
 
 
-### 2、logback的常用Pattern介绍
+### logback的常用Pattern介绍
 
 >日志打印时间  %d|%date{时间格式化}  如：%d{YYYY-MM-dd HH:mm:ss}  
  相对时间   %r|%relative  
@@ -88,7 +88,7 @@ public class DemoHelloword {
 
 除了这些常用的Pattern之外，其他配置可以[点击查看](https://github.com/qos-ch/logback/blob/master/logback-classic/src/main/java/ch/qos/logback/classic/PatternLayout.java)
 
-### 3、logback之基于java手动编写Pattern演示使用
+### logback之基于java手动编写Pattern演示使用
 
 ```
 public static void main(String[] args) {
@@ -139,9 +139,9 @@ public static void main(String[] args) {
 具体详情可以[点击查看](https://github.com/zhiliao666/java-log/blob/master/zhiliao-logback/src/main/java/com/zhiliao/demo/DemoLogPattern.java)
 
 
-### 4，logback基于配置文件的使用
+### logback基于配置文件的使用
 
-#### 4.1 基于配置文件打印日志
+#### 基于配置文件打印日志
 
 
 >配置如下：
@@ -170,7 +170,7 @@ public static void main(String[] args) {
 
 运行演示代码具体可以[点击查看](https://github.com/zhiliao666/java-log/blob/master/zhiliao-logback/src/main/java/com/zhiliao/demo/DemoLogReadConfig01.java)
 
-#### 4.2 logback日志打印到具体file文件
+#### logback日志打印到具体file文件
 
 >配置如下：
 
@@ -206,7 +206,7 @@ public static void main(String[] args) {
 </configuration>
 
 ```
-#### 4.3 logback根据项目运行时间生成对应的日志文件
+#### logback根据项目运行时间生成对应的日志文件
 
 配置如下：
 ```
@@ -241,7 +241,7 @@ public static void main(String[] args) {
 </configuration>
 
 ```
-#### 4.4 logback基于时间回滚日志配置
+#### logback基于时间回滚日志配置
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -298,7 +298,7 @@ public static void main(String[] args) {
 
 ```
 
-#### 4.5 logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy
+#### logback文件大小上限设置回滚SizeAndTimeBasedRollingPolicy
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
