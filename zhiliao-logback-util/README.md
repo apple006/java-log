@@ -141,8 +141,8 @@ public class LogTest {
 
 这样就可以直接在项目中按如下方式使用了
 
->private static final Logger logger = (Logger) ZhiliaoLogFactory.getLogger(LogTest.class)
-			.enableConsoleAppender() // 这些配置规矩项目需要使用  
-			.disableFileAppender()  
-			.enablePatternLayout()  
-			.build();
+>private static final Logger logger = (Logger) ZhiliaoLogFactory.getLogger(LogTest.class)  
+			&emsp;.enableConsoleAppender() // 这些配置规矩项目需要使用  
+			&emsp;.disableFileAppender()  
+			&emsp;.enablePatternLayout()  
+			&emsp;.build();
