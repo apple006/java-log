@@ -9,18 +9,18 @@
 ## 1,配置参数说明
 
 >loggerName  日志名称/对应业务主题名称  
- basePath   日志存放跟路径 可以是相对路径 如当前项目目录的logs目录下 则配置为：/logs 
- backPath  日志备份回滚目录
- fileName   日志文件名称
- fileNamePattern 日志文件回滚条件格式Pattern
- maxFileSize 日志文件最大大小 默认大小2MB
- maxHistory  历史日志保留最长时间 默认30天
- totalSizeCap 日志存储总大小限制 如： maxHistory 配置为30 totalSizeCap配置为3G 意思就是最多保持30天的历史日志数据 如果30天内的数据大于3GB将会按时间清除老日志文件 
- layout 自定义日志格式化layout 默认的为SimpleEncoderLayout
- enablePatternLayout 是否启用PatternLayoutEncoder 默认是false
- enableConsoleAppender 是否开启控制台打印 默认false
- enableFileAppender 是否开启文件打印 默认true
- encoderPattern PatternLayoutEncoder日志格式化对应的Pattern
+ basePath   日志存放跟路径 可以是相对路径 如当前项目目录的logs目录下 则配置为：/logs  
+ backPath  日志备份回滚目录  
+ fileName   日志文件名称  
+ fileNamePattern 日志文件回滚条件格式Pattern  
+ maxFileSize 日志文件最大大小 默认大小2MB  
+ maxHistory  历史日志保留最长时间 默认30天  
+ totalSizeCap 日志存储总大小限制 如： maxHistory 配置为30 totalSizeCap配置为3G 意思就是最多保持30天的历史日志数据 如果30天内的数据大于3GB将会按时间清除老日志文件   
+ layout 自定义日志格式化layout 默认的为SimpleEncoderLayout  
+ enablePatternLayout 是否启用PatternLayoutEncoder 默认是false  
+ enableConsoleAppender 是否开启控制台打印 默认false  
+ enableFileAppender 是否开启文件打印 默认true  
+ encoderPattern PatternLayoutEncoder日志格式化对应的Pattern  
  
  ## 2,使用说明
  
@@ -79,8 +79,8 @@ public class LogTest {
 }
 ```
 
-使用自定义的Logger方式运行三次时间分别是：440，347，298  平均时间为：361.66
-使用默认的Logger方式运行三次时间分别是：367，352,455 平均时间为：391.33
+使用自定义的Logger方式运行三次时间分别是：440，347，298  平均时间为：361.66  
+使用默认的Logger方式运行三次时间分别是：367，352,455 平均时间为：391.33  
 
 从以上结果我们可以发现自定义的方式平均时间反而比默认时间还要短一些，从原理分析来上以上两种用法性能其实是没有任何区别，
 但是如果你的业务上仅仅只是想打印简单的message信息，那么可以使用自定义的打印将会有比较大的性能提升如下：
@@ -142,7 +142,7 @@ public class LogTest {
 这样就可以直接在项目中按如下方式使用了
 
 >private static final Logger logger = (Logger) ZhiliaoLogFactory.getLogger(LogTest.class)
-			.enableConsoleAppender() // 这些配置规矩项目需要使用
-			.disableFileAppender()
-			.enablePatternLayout()
+			.enableConsoleAppender() // 这些配置规矩项目需要使用  
+			.disableFileAppender()  
+			.enablePatternLayout()  
 			.build();
