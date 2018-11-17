@@ -68,7 +68,7 @@ public class ZhiliaoLogFactory {
 		private String fileNamePattern;
 
 		/**
-		 * 日志文件最大大小
+		 * 日志文件最大大小 默认大小2MB
 		 */
 		private FileSize maxFileSize;
 
@@ -87,11 +87,6 @@ public class ZhiliaoLogFactory {
 		 * 自定义日志格式化layout 默认的为SimpleEncoderLayout
 		 */
 		private Layout<ILoggingEvent> layout;
-
-		/**
-		 * 是否启用PatternLayoutEncoder
-		 */
-		private Boolean enablePatternLayout = this.DEFAULT_ENABLE_PATTERNLAYOUT;
 		
 		/**
 		 * 是否开启控制台打印 默认false
@@ -102,6 +97,11 @@ public class ZhiliaoLogFactory {
 		 * 是否开启文件打印 默认true
 		 */
 		private Boolean enableFileAppender = this.DEFAULT_ENABLE_FILEEAPPENDER;
+		
+		/**
+		 * 是否启用PatternLayoutEncoder
+		 */
+		private Boolean enablePatternLayout = this.DEFAULT_ENABLE_PATTERNLAYOUT;
 
 		/**
 		 * PatternLayoutEncoder日志格式化对应的Pattern
@@ -111,9 +111,9 @@ public class ZhiliaoLogFactory {
 		private LogBuilder(String loggerName) {
 			this.loggerName = loggerName;
 			this.basePath = "logs";
-			this.fileName = "ufoto_log";
+			this.fileName = "zhiliao_log";
 			this.fileNamePattern = "%d{yyyy-MM-dd}.%i";
-			this.maxFileSize = FileSize.valueOf("2KB");
+			this.maxFileSize = FileSize.valueOf("2MB");
 			this.maxHistory = 30;
 			this.backPath = "back";
 			this.totalSizeCap = FileSize.valueOf("3GB");
@@ -121,7 +121,7 @@ public class ZhiliaoLogFactory {
 			// this.encoderPattern = "%msg%n";
 			this.layout = new SimpleEncoderLayout();
 		}
-
+		
 		public LogBuilder withBackPath(String backPath) {
 			this.backPath = backPath;
 			return this;

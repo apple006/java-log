@@ -4,7 +4,7 @@
 
   <groupId>com.zhiliao</groupId>
   <artifactId>zhiliao-logback-util</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>zhiliao-logback-util</name>
